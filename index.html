@@ -13,8 +13,20 @@
 
 <body>
     <style>
+        @media print {
+            header {
+                display: none;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+
         body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 1100px;
+            margin: auto;
         }
 
         .tag {
@@ -22,12 +34,14 @@
             padding: 4px;
             border-radius: 2px;
             color: white;
-            background-color: #5553a9;
+            /* background-color: #5553a9; */
+            background-color: #ffdb10;
             font-weight: 600;
         }
 
         h2 {
             display: inline;
+            color: #5553a9;
         }
 
         section {
@@ -36,6 +50,16 @@
             border-radius: 10px;
             padding: 10px;
             margin: 10px 0;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section li:before {
+            padding: 5px;
+            border-radius: 2px;
+            background-color: #5553a9;
         }
 
         .links {
@@ -50,13 +74,15 @@
         }
 
         .links li a {
-            color: #5553a9;
+            /* color: #5553a9; */
+            color: #ffdb10;
         }
 
         nav ul {
             margin: 0;
             padding: 0;
             list-style: none;
+            text-align: center;
         }
 
         nav li {
@@ -68,6 +94,7 @@
             font-weight: 600;
             color: #5553a9;
             text-decoration: none;
+            font-size: 1.2em;
         }
 
         nav li a:hover {
@@ -76,18 +103,22 @@
         }
     </style>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <h1>Projects</h1>
 
-    <h2>Multiplayer game</h2><span class="tag">Multiplayer</span>
+    <h2>Multiplayer game</h2><span class="tag">C++</span><span class="tag">Multiplayer</span>
     <p>
         abc
     </p>
@@ -103,7 +134,6 @@
     </p>
 
     <h2>Mix 'n Fleeces</h2>
-    <h3>Contributions</h3>
     <ul>
         <li>Breeding and family tree implementation</li>
         <li>Idle and wander sheep behaviour</li>
@@ -139,11 +169,11 @@
     <h2>Ants vs Bubbles</h2>
 
     <section>
-        <h2>Tetris Bot</h2><span class="tag">AI</span>
+        <h2>Tetris Bot</h2><span class="tag">Ruby</span><span class="tag">AI</span>
     </section>
 
     <section>
-        <h2>Metro</h2>
+        <h2>Metro</h2><span class="tag">Ruby</span><span class="tag">Compilers</span>
     </section>
 
     <section>
