@@ -20,6 +20,7 @@
     - name: Unity
       icon: fa-brands fa-unity
     - Platformer
+    - Capstone
   color: "#161421"
   description: A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor. In this 2D movement platformer, take control of a curious fox - suddenly attached to an anchor with eyes! After stealing the treasured anchor from an ancient temple, use your newfound metal friend as a magical tool to throw, swing and fling your way out of the jungle as fast as possible.
   text_color: "#f5f0ff"
@@ -35,22 +36,47 @@
     - url: https://notfoxstudios.itch.io/a-foxs-tale#download
       icon: fa-windows
 
-- name: Multiplayer game
-  tags: [C++, Multiplayer]
-  description: abc
+- name: Helleidoscope
+  tags: [Godot, Game Jam, Rhythm]
+  description: In our Lo-fi Rhythm game, you must get in the groove and help Lux, Scratch, and Sui escape from the disco demon and her technicolour hell!
+  image: /assets/images/helleidoscope/background.png
+  fade: to left
+  color: "#000000"
+  links:
+    - url: https://untrainedmonkey.itch.io/helleidoscope
+      icon: fa-itch-io
+    - url: https://untrainedmonkey.itch.io/helleidoscope
+      icon: fa-chrome
+    - url: https://untrainedmonkey.itch.io/helleidoscope#download
+      icon: fa-windows
 
-- name: Swan Game
-  description: abc
-
-- name: Monstr Army
-  tags: [AI]
-  description: abc
+- name: Iridescent Haze
+  tags:
+    - name: Unity
+      icon: fa-brands fa-unity
+    - Game Jam
+    - Dungeon Crawler
+  description: Iridescent Haze is a trippy dungeon crawler that has you, the famous rockstar Joan, trying to get home after one of the best gigs of your life. However, Joan is currently drunk and high and everything is a mix of smoke and mirrors.
+  image: /assets/images/iridescent-haze/background.png
+  fade: to left
+  color: "#000000"
+  links:
+    - url: https://noah-rapetti.itch.io/iridescenthaze
+      icon: fa-itch-io
+    - url: https://noah-rapetti.itch.io/iridescenthaze#download
+      icon: fa-windows
+    - url: https://noah-rapetti.itch.io/iridescenthaze#download
+      icon: fa-apple
 
 - name: Mix 'n Fleeces
   bullets:
     - Breeding and family tree implementation
     - Idle and wander sheep behaviour
     - Sheep interaction
+
+- name: Monstr Army
+  tags: [AI]
+  description: abc
 
 - name: Soul Altar
 
@@ -66,8 +92,6 @@
 - name: Honeycomb Festival
 
 - name: Ghost Bullet
-
-- name: Iridescent Haze
 
 - name: Mighty Rollers
 
