@@ -11,6 +11,24 @@
 #     image: /assets/images/project/hero.png
 #     side:  left or right (default right)
 
+- name: A Fox's Tale
+  title_image: /assets/images/a-foxs-tale/title.png
+  tags: [Unity, Platformer]
+  color: "#1c1511"
+  description: A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor. In this 2D movement platformer, take control of a curious fox - suddenly attached to an anchor with eyes! After stealing the treasured anchor from an ancient temple, use your newfound metal friend as a magical tool to throw, swing and fling your way out of the jungle as fast as possible.
+  text_color: "#f5f0ff"
+  image: /assets/images/a-foxs-tale/background.png
+  video: /assets/videos/a-foxs-tale/background.mp4
+  fade: to left
+  hero:
+    image: /assets/images/a-foxs-tale/hero.png
+    side: right
+  links:
+    - url: https://notfoxstudios.itch.io/a-foxs-tale
+      icon: fa-itch-io
+    - url: https://notfoxstudios.itch.io/a-foxs-tale#download
+      icon: fa-windows
+
 - name: Multiplayer game
   tags: [C++, Multiplayer]
   description: abc
@@ -29,28 +47,6 @@
     - Sheep interaction
 
 - name: Soul Altar
-
-- name: A Fox's Tale
-  title_image: /assets/images/a-foxs-tale/title.png
-  tags: [Unity, Platformer]
-  color: "#1e1530"
-  description: A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor. In this 2D movement platformer, take control of a curious fox - suddenly attached to an anchor with eyes! After stealing the treasured anchor from an ancient temple, use your newfound metal friend as a magical tool to throw, swing and fling your way out of the jungle as fast as possible.
-  text_color: "#f5f0ff"
-  image: /assets/images/a-foxs-tale/background.png
-  video: /assets/videos/a-foxs-tale/background.mp4
-  fade: to right
-  hero:
-    image: /assets/images/a-foxs-tale/hero.png
-    side: right
-  links:
-    - url: https://untrainedmonkey.itch.io/meltdown
-      icon: fa-itch-io
-    - url: "#"
-      icon: fa-windows
-    - url: "#"
-      icon: fa-apple
-    - url: "#"
-      icon: fa-linux
 
 - name: Game Changers
   bullets:
