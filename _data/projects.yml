@@ -1,6 +1,8 @@
 # Each project is rendered as a panel by the loop in index.html.
 # All fields except name are optional:
 #   tags, description, bullets, links (icon = Font Awesome class)
+#   tags can be plain text, or have an icon (full Font Awesome classes):
+#     tags: [Platformer, { name: Unity, icon: fa-brands fa-unity }]
 #   title_image: logo shown instead of the name (name is still used as alt text)
 #   color:      panel background colour, e.g. "#1d2b3a"
 #   text_color: text colour, e.g. dark text on a light panel
@@ -8,13 +10,17 @@
 #   video:      background video, plays after hovering the panel, pauses on leave
 #   fade:       fade direction, e.g. "to right" (default "to bottom")
 #   hero:       large image beside the text, overlapping the panel edge
-#     image: /assets/images/project/hero.png
-#     side:  left or right (default right)
+#     image:  /assets/images/project/hero.png
+#     side:   left or right (default right)
+#     height: e.g. 26rem (default 22rem); width follows the image
 
 - name: A Fox's Tale
   title_image: /assets/images/a-foxs-tale/title.png
-  tags: [Unity, Platformer]
-  color: "#1c1511"
+  tags:
+    - name: Unity
+      icon: fa-brands fa-unity
+    - Platformer
+  color: "#161421"
   description: A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor. In this 2D movement platformer, take control of a curious fox - suddenly attached to an anchor with eyes! After stealing the treasured anchor from an ancient temple, use your newfound metal friend as a magical tool to throw, swing and fling your way out of the jungle as fast as possible.
   text_color: "#f5f0ff"
   image: /assets/images/a-foxs-tale/background.png

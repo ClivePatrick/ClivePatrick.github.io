@@ -22,12 +22,19 @@ layout: default
         <div class="project__body">
             <h2>
                 {%- if project.title_image -%}
-                <img class="project__title-image" src="{{ project.title_image | relative_url }}" alt="{{ project.name }}" />
+                {%- assign size = project.title_image | image_size -%}
+                <img class="project__title-image" src="{{ project.title_image | relative_url }}" alt="{{ project.name }}"
+                    {%- if size %} width="{{ size[0] }}" height="{{ size[1] }}" style="--w: {{ size[0] }}; --h: {{ size[1] }}"{% endif %} />
                 {%- else -%}
                 {{ project.name }}
                 {%- endif -%}
             </h2>
-            {%- for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+            {%- for tag in project.tags -%}
+            <span class="tag">
+                {%- if tag.icon %}<i class="{{ tag.icon }}"></i>{% endif -%}
+                {{ tag.name | default: tag -}}
+            </span>
+            {%- endfor %}
 
             {% if project.description %}
             <p>{{ project.description }}</p>
@@ -51,7 +58,10 @@ layout: default
         </div>
 
         {% if project.hero %}
-        <img class="project__hero" src="{{ project.hero.image | relative_url }}" alt="{{ project.name }}" />
+        {%- assign size = project.hero.image | image_size %}
+        <img class="project__hero" src="{{ project.hero.image | relative_url }}" alt="{{ project.name }}"
+            {%- if size %} width="{{ size[0] }}" height="{{ size[1] }}"{% endif %}
+            {%- if project.hero.height %} style="--hero-height: {{ project.hero.height }}"{% endif %} />
         {% endif %}
     </section>
     {% endfor %}
