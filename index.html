@@ -1,122 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-    <title>Clive Patrick</title>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Clive Patrick" />
-    <meta name="keywords" content="Clive, Patrick, Developer, Software, Engineer, Showcase, Personal, Portfolio" />
-    <meta name="description" content="Personal website" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-</head>
+<h1>Projects</h1>
 
-<body>
-    <header>
-        <nav>
+<div class="projects">
+    {% for project in site.data.projects %}
+    {%- capture style -%}
+        {%- if project.color %}--panel-color: {{ project.color }};{% endif -%}
+        {%- if project.image %}--panel-image: url('{{ project.image | relative_url }}');{% endif -%}
+        {%- if project.fade %}--panel-fade: {{ project.fade }};{% endif -%}
+        {%- if project.text_color %}color: {{ project.text_color }};{% endif -%}
+    {%- endcapture -%}
+
+    <section class="project{% if project.hero %} project--hero-{{ project.hero.side | default: 'right' }}{% endif %}"
+        {%- if style != "" %} style="{{ style }}"{% endif %}>
+        {% if project.video %}
+        <video class="project__video" src="{{ project.video | relative_url }}" muted loop playsinline preload="metadata"></video>
+        {% endif %}
+
+        <div class="project__body">
+            <h2>
+                {%- if project.title_image -%}
+                <img class="project__title-image" src="{{ project.title_image | relative_url }}" alt="{{ project.name }}" />
+                {%- else -%}
+                {{ project.name }}
+                {%- endif -%}
+            </h2>
+            {%- for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+
+            {% if project.description %}
+            <p>{{ project.description }}</p>
+            {% endif %}
+
+            {% if project.bullets %}
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Resume</a></li>
+                {% for bullet in project.bullets %}
+                <li>{{ bullet }}</li>
+                {% endfor %}
             </ul>
-        </nav>
-    </header>
+            {% endif %}
 
-    <h1>Projects</h1>
+            {% if project.links %}
+            <ul class="links">
+                {% for link in project.links %}
+                <li><a href="{{ link.url }}"><i class="fa-brands {{ link.icon }} fa-2xl"></i></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
 
-    <h2>Multiplayer game</h2><span class="tag">C++</span><span class="tag">Multiplayer</span>
-    <p>
-        abc
-    </p>
-
-    <h2>Swan Game</h2>
-    <p>
-        abc
-    </p>
-
-    <h2>Monstr Army</h2><span class="tag">AI</span>
-    <p>
-        abc
-    </p>
-
-    <h2>Mix 'n Fleeces</h2>
-    <ul>
-        <li>Breeding and family tree implementation</li>
-        <li>Idle and wander sheep behaviour</li>
-        <li>Sheep interaction</li>
-    </ul>
-
-    <h2>Soul Altar</h2>
-
-    <h2>A Fox's Tale</h2>
-    <ul>
-        <li>Chain mechanics</li>
-    </ul>
-
-    <h2>Game Changers</h2>
-    <ul>
-        <li>Expandable hacks</li>
-    </ul>
-    <h2>Tiny Genesis</h2>
-    <p>
-        Over 10,000 downloads and plays!
-    </p>
-    <ul>
-    </ul>
-
-    <section>
-        <h2>Honeycomb Festival</h2>
+        {% if project.hero %}
+        <img class="project__hero" src="{{ project.hero.image | relative_url }}" alt="{{ project.name }}" />
+        {% endif %}
     </section>
-    <section>
-        <h2>Ghost Bullet</h2>
-    </section>
-    <section>
-        <h2>Iridescent Haze</h2>
-    </section>
-    <section>
-        <h2>Mighty Rollers</h2>
-    </section>
-    <section>
-        <h2>Ants vs Bubbles</h2>
-    </section>
-    <section>
-        <h2>Tetris Bot</h2><span class="tag">Ruby</span><span class="tag">AI</span>
-    </section>
-    <section>
-        <h2>Metro</h2><span class="tag">Ruby</span><span class="tag">Compilers</span>
-    </section>
-    <section>
-        <h2>Futile</h2>
-    </section>
-    <section>
-        <h2>Out of Order</h2>
-        <p>
-
-        </p>
-        <ul>
-            <li>
-                abc
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h2>Re:main</h2><span class="tag">Unity</span>
-    </section>
-    <section>
-        <h2>Meltdown</h2><span class="tag">Godot</span>
-        <p>
-
-        </p>
-        <ul class="links">
-            <li><a href="https://untrainedmonkey.itch.io/meltdown"><i class="fa-brands fa-itch-io fa-2xl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-windows fa-2xl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-apple fa-2xl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linux fa-2xl"></i></a></li>
-        </ul>
-    </section>
-
-    <h2></h2>
-</body>
-
-</html>
+    {% endfor %}
+</div>

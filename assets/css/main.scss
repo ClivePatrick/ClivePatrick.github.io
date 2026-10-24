@@ -1,0 +1,171 @@
+---
+---
+
+$page-bg: #121216;
+$text: #ececf1;
+$panel-bg: #1e1e25; // default panel colour
+$radius: 1.5rem;
+$pad: 2rem;
+$hero-overhang: 1rem; // how far the hero image extends past the panel edge
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    background: $page-bg;
+    color: $text;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    list-style: none;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project {
+    // Set per project from _data/projects.yml
+    --panel-color: #{$panel-bg};
+    --panel-image: none;
+    --panel-fade: to bottom;
+
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    gap: $pad;
+    padding: $pad;
+    border-radius: $radius;
+    background-color: var(--panel-color);
+
+    // Background image/video covering the panel, fading out to the panel colour
+    &::before,
+    .project__video {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: inherit;
+        mask-image: linear-gradient(var(--panel-fade), #000, transparent);
+    }
+
+    &::before {
+        content: "";
+        background: var(--panel-image) center / cover no-repeat;
+        transition: opacity 0.6s;
+    }
+
+    // Swap the static image for the video while it plays
+    &:has(.project__video.is-playing)::before {
+        opacity: 0;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    &--hero-left {
+        flex-direction: row-reverse;
+    }
+
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// Only visible while playing
+.project__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s;
+
+    &.is-playing {
+        opacity: 1;
+    }
+}
+
+.project__title-image {
+    display: block;
+    max-width: 100%;
+    max-height: 5rem;
+}
+
+.project__body {
+    flex: 1;
+    min-width: 0;
+}
+
+.project__hero {
+    flex: 0 0 40%;
+    width: 40%;
+    object-fit: cover;
+    margin-block: -($pad + $hero-overhang);
+
+    .project--hero-right & {
+        margin-right: -($pad + $hero-overhang);
+    }
+
+    .project--hero-left & {
+        margin-left: -($pad + $hero-overhang);
+    }
+}
+
+.tag {
+    display: inline-block;
+    margin: 0 0.4rem 0.5rem 0;
+    padding: 0.1rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+
+    a {
+        color: inherit;
+    }
+}
+
+// Stack the hero above the text on narrow screens
+@media (max-width: 640px) {
+    .project,
+    .project--hero-left {
+        flex-direction: column-reverse;
+    }
+
+    .project__hero,
+    .project--hero-left .project__hero,
+    .project--hero-right .project__hero {
+        width: auto;
+        flex-basis: auto;
+        margin: (-$pad - $hero-overhang) (-$pad - $hero-overhang) 0;
+    }
+}
