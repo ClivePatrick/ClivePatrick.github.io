@@ -21,12 +21,18 @@
       icon: fa-brands fa-unity
     - Platformer
     - Capstone
-  color: "#161421"
-  description: A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor. In this 2D movement platformer, take control of a curious fox - suddenly attached to an anchor with eyes! After stealing the treasured anchor from an ancient temple, use your newfound metal friend as a magical tool to throw, swing and fling your way out of the jungle as fast as possible.
-  text_color: "#f5f0ff"
+  description: >
+    A Fox's Tale is a game about swinging, flinging, and a fox chained to a magical anchor.
+    In this 2D movement platformer, take control of a curious
+    fox -suddenly attached to an anchor with eyes!
+    After stealing the treasured anchor from an ancient temple,
+    use your newfound metal friend as a magical tool to throw,
+    swing and fling your way out of the jungle as fast as possible.
   image: /assets/images/a-foxs-tale/background.png
   video: /assets/videos/a-foxs-tale/background.mp4
   fade: to left
+  color: "#000000"
+  text_color: "#f5f0ff"
   hero:
     image: /assets/images/a-foxs-tale/hero.png
     side: right
@@ -38,7 +44,9 @@
 
 - name: Helleidoscope
   tags: [Godot, Game Jam, Rhythm]
-  description: In our Lo-fi Rhythm game, you must get in the groove and help Lux, Scratch, and Sui escape from the disco demon and her technicolour hell!
+  description: >
+    In our Lo-fi Rhythm game, you must get in the groove and help Lux, Scratch,
+    and Sui escape from the disco demon and her technicolour hell!
   image: /assets/images/helleidoscope/background.png
   fade: to left
   color: "#000000"
@@ -56,7 +64,10 @@
       icon: fa-brands fa-unity
     - Game Jam
     - Dungeon Crawler
-  description: Iridescent Haze is a trippy dungeon crawler that has you, the famous rockstar Joan, trying to get home after one of the best gigs of your life. However, Joan is currently drunk and high and everything is a mix of smoke and mirrors.
+  description: >
+    Iridescent Haze is a trippy dungeon crawler that has you, the famous rockstar Joan,
+    trying to get home after one of the best gigs of your life.
+    However, Joan is currently drunk and high and everything is a mix of smoke and mirrors.
   image: /assets/images/iridescent-haze/background.png
   fade: to left
   color: "#000000"
@@ -66,6 +77,45 @@
     - url: https://noah-rapetti.itch.io/iridescenthaze#download
       icon: fa-windows
     - url: https://noah-rapetti.itch.io/iridescenthaze#download
+      icon: fa-apple
+
+- name: Less Is More
+  tags:
+    - name: Unity
+      icon: fa-brands fa-unity
+    - Game Jam
+    - Puzzle
+  description: >
+    Less is More is a relaxing puzzle game with the challenge of fitting and
+    overlapping Tetris-like pieces until every board cell is zero.
+  image: /assets/images/less-is-more/background.png
+  fade: to left
+  color: "#000000"
+  links:
+    - url: https://untrainedmonkey.itch.io/less-is-more
+      icon: fa-itch-io
+    - url: https://untrainedmonkey.itch.io/less-is-more#download
+      icon: fa-windows
+
+- name: Honeycomb Festival
+  tags:
+    - name: Unity
+      icon: fa-brands fa-unity
+    - Game Jam
+    - Adventure
+  description: >
+    In the quiet world of Thistledrop, the time has come for the annual honey festival!
+    You play as Lynette, a fairy who has a guide bear, Teddy.
+    On your way to the festival, collect honeycomb for the festival, and watch out for those pesky bees!
+  image: /assets/images/honeycomb-festival/background.png
+  fade: to left
+  color: "#000000"
+  links:
+    - url: https://dvalkyrie.itch.io/honeycomb-festival
+      icon: fa-itch-io
+    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
+      icon: fa-windows
+    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
       icon: fa-apple
 
 - name: Mix 'n Fleeces
@@ -89,8 +139,6 @@
   text_color: "#1c1c1c"
   description: Over 10,000 downloads and plays!
 
-- name: Honeycomb Festival
-
 - name: Ghost Bullet
 
 - name: Mighty Rollers
@@ -109,20 +157,25 @@
   bullets:
     - abc
 
-- name: Re:main
+- name: Re:Main
   tags: [Unity]
 
 - name: Meltdown
-  tags: [Godot]
+  tags: [Godot, Game Jam, Puzzle]
   color: "#1e1530"
   text_color: "#f5f0ff"
-  fade: to right
+  fade: to left
+  description: > 
+    Find and destroy the reactor without being caught by the facility's team of security robots.
+    You'll need to use key cards, portals to a parallel dimension and mine's that when triggered
+    teleport a robot out of your way.
+  image: /assets/images/meltdown/background.png
   links:
     - url: https://untrainedmonkey.itch.io/meltdown
       icon: fa-itch-io
-    - url: "#"
+    - url: https://untrainedmonkey.itch.io/meltdown#download
       icon: fa-windows
-    - url: "#"
+    - url: https://untrainedmonkey.itch.io/meltdown#download
       icon: fa-apple
-    - url: "#"
+    - url: https://untrainedmonkey.itch.io/meltdown#download
       icon: fa-linux
