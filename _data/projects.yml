@@ -13,6 +13,8 @@
 #     image:  /assets/images/project/hero.png
 #     side:   left or right (default right)
 #     height: e.g. 26rem (default 22rem); width follows the image
+#   flip:       true to mirror the layout: title, tags and links on the right,
+#               hero on the opposite side to `hero.side`
 
 - name: A Fox's Tale
   title_image: /assets/images/a-foxs-tale/title.png
@@ -42,14 +44,37 @@
     - url: https://notfoxstudios.itch.io/a-foxs-tale#download
       icon: fa-windows
 
+- name: Honeycomb Festival
+  tags:
+    - name: Unity
+      icon: fa-brands fa-unity
+    - Game Jam
+    - Adventure
+  description: >
+    In the quiet world of Thistledrop, the time has come for the annual honey festival!
+    You play as Lynette, a fairy who has a guide bear, Teddy.
+    On your way to the festival, collect honeycomb for the festival, and watch out for those pesky bees!
+  image: /assets/images/honeycomb-festival/background.png
+  video: /assets/videos/honeycomb-festival/background.mp4
+  fade: to left
+  color: "#000000"
+  links:
+    - url: https://dvalkyrie.itch.io/honeycomb-festival
+      icon: fa-itch-io
+    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
+      icon: fa-windows
+    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
+      icon: fa-apple
+
 - name: Helleidoscope
   tags: [Godot, Game Jam, Rhythm]
   description: >
     In our Lo-fi Rhythm game, you must get in the groove and help Lux, Scratch,
     and Sui escape from the disco demon and her technicolour hell!
   image: /assets/images/helleidoscope/background.png
-  fade: to left
+  fade: to right
   color: "#000000"
+  flip: true
   links:
     - url: https://untrainedmonkey.itch.io/helleidoscope
       icon: fa-itch-io
@@ -89,34 +114,14 @@
     Less is More is a relaxing puzzle game with the challenge of fitting and
     overlapping Tetris-like pieces until every board cell is zero.
   image: /assets/images/less-is-more/background.png
-  fade: to left
+  fade: to right
   color: "#000000"
+  flip: true
   links:
     - url: https://untrainedmonkey.itch.io/less-is-more
       icon: fa-itch-io
     - url: https://untrainedmonkey.itch.io/less-is-more#download
       icon: fa-windows
-
-- name: Honeycomb Festival
-  tags:
-    - name: Unity
-      icon: fa-brands fa-unity
-    - Game Jam
-    - Adventure
-  description: >
-    In the quiet world of Thistledrop, the time has come for the annual honey festival!
-    You play as Lynette, a fairy who has a guide bear, Teddy.
-    On your way to the festival, collect honeycomb for the festival, and watch out for those pesky bees!
-  image: /assets/images/honeycomb-festival/background.png
-  fade: to left
-  color: "#000000"
-  links:
-    - url: https://dvalkyrie.itch.io/honeycomb-festival
-      icon: fa-itch-io
-    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
-      icon: fa-windows
-    - url: https://dvalkyrie.itch.io/honeycomb-festival#download
-      icon: fa-apple
 
 - name: Mix 'n Fleeces
   bullets:

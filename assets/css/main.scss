@@ -141,9 +141,14 @@ main {
     }
 }
 
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
 .tag {
-    display: inline-block;
-    margin: 0 0.4rem 0.5rem 0;
     padding: 0.1rem 0.7rem;
     border-radius: 999px;
     font-size: 0.85rem;
@@ -163,6 +168,22 @@ main {
 
     a {
         color: inherit;
+    }
+}
+
+// `flip: true` — title, tags and links on the right (the hero side is swapped in index.html)
+.project--flipped {
+    h2 {
+        text-align: right;
+    }
+
+    .project__title-image {
+        margin-left: auto;
+    }
+
+    .tags,
+    .links {
+        justify-content: flex-end;
     }
 }
 

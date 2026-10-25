@@ -13,7 +13,12 @@ layout: default
         {%- if project.text_color %}color: {{ project.text_color }};{% endif -%}
     {%- endcapture -%}
 
-    <section class="project{% if project.hero %} project--hero-{{ project.hero.side | default: 'right' }}{% endif %}"
+    {%- assign hero_side = project.hero.side | default: 'right' -%}
+    {%- if project.flip -%}
+        {%- if hero_side == 'right' %}{% assign hero_side = 'left' %}{% else %}{% assign hero_side = 'right' %}{% endif -%}
+    {%- endif %}
+
+    <section class="project{% if project.hero %} project--hero-{{ hero_side }}{% endif %}{% if project.flip %} project--flipped{% endif %}"
         {%- if style != "" %} style="{{ style }}"{% endif %}>
         {% if project.video %}
         <video class="project__video" src="{{ project.video | relative_url }}" muted loop playsinline preload="metadata"></video>
@@ -29,12 +34,17 @@ layout: default
                 {{ project.name }}
                 {%- endif -%}
             </h2>
-            {%- for tag in project.tags -%}
-            <span class="tag">
-                {%- if tag.icon %}<i class="{{ tag.icon }}"></i>{% endif -%}
-                {{ tag.name | default: tag -}}
-            </span>
-            {%- endfor %}
+
+            {% if project.tags %}
+            <div class="tags">
+                {%- for tag in project.tags -%}
+                <span class="tag">
+                    {%- if tag.icon %}<i class="{{ tag.icon }}"></i>{% endif -%}
+                    {{ tag.name | default: tag -}}
+                </span>
+                {%- endfor -%}
+            </div>
+            {% endif %}
 
             {% if project.description %}
             <p>{{ project.description }}</p>
