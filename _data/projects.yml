@@ -1,6 +1,7 @@
 # Each project is rendered as a panel by the loop in index.html.
 # All fields except name are optional:
-#   tags, description, bullets, links (icon = Font Awesome class)
+#   year, tags, description, bullets, links (icon = Font Awesome class)
+#   year:       e.g. 2024, shown as the first tag
 #   tags can be plain text, or have an icon (full Font Awesome classes):
 #     tags: [Platformer, { name: Unity, icon: fa-brands fa-unity }]
 #   title_image: logo shown instead of the name (name is still used as alt text)
@@ -129,42 +130,6 @@
     - Idle and wander sheep behaviour
     - Sheep interaction
 
-- name: Monstr Army
-  tags: [AI]
-  description: abc
-
-- name: Soul Altar
-
-- name: Game Changers
-  bullets:
-    - Expandable hacks
-
-- name: Tiny Genesis
-  color: "#dff3e4"
-  text_color: "#1c1c1c"
-  description: Over 10,000 downloads and plays!
-
-- name: Ghost Bullet
-
-- name: Mighty Rollers
-
-- name: Ants vs Bubbles
-
-- name: Tetris Bot
-  tags: [Ruby, AI]
-
-- name: Metro
-  tags: [Ruby, Compilers]
-
-- name: Futile
-
-- name: Out of Order
-  bullets:
-    - abc
-
-- name: Re:Main
-  tags: [Unity]
-
 - name: Meltdown
   tags: [Godot, Game Jam, Puzzle]
   color: "#1e1530"
@@ -184,3 +149,54 @@
       icon: fa-apple
     - url: https://untrainedmonkey.itch.io/meltdown#download
       icon: fa-linux
+
+- name: Tiny Genesis
+  tags: [Game Jam, Incremental]
+  color: "#dff3e4"
+  text_color: "#1c1c1c"
+  description: Over 10,000 downloads and plays!
+  links:
+  - url: https://untrainedmonkey.itch.io/tiny-genesis
+    icon: fa-itch-io
+  - url: https://untrainedmonkey.itch.io/tiny-genesis#download
+    icon: fa-windows
+
+- name: Mighty Rollers
+  tags: [Game Jam, Strategy]
+
+- name: Ants vs Bubbles
+  tags: [Game Jam, Puzzle]
+
+- name: Colour Bound
+  tags: [Game Jam, Platformer]
+
+- name: Re:Main
+  tags: [Unity]
+
+- name: CPA Racer
+  tags: [Unity]
+
+- name: Tetris Bot
+  tags: [Ruby, AI]
+
+- name: Metro
+  tags: [Ruby, Compilers]
+
+# - name: Blood Letter
+
+# - name: Ghost Bullet
+
+# - name: Monstr Army
+#   tags: [AI]
+
+# - name: Soul Altar
+
+# - name: Game Changers
+
+# - name: Genesis
+
+# - name: Jack o' Lantern
+
+# - name: Futile
+
+# - name: Out of Order

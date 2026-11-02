@@ -35,8 +35,11 @@ layout: default
                 {%- endif -%}
             </h2>
 
-            {% if project.tags %}
+            {% if project.tags or project.year %}
             <div class="tags">
+                {%- if project.year -%}
+                <span class="tag"><i class="fa-regular fa-calendar"></i>{{ project.year }}</span>
+                {%- endif -%}
                 {%- for tag in project.tags -%}
                 <span class="tag">
                     {%- if tag.icon %}<i class="{{ tag.icon }}"></i>{% endif -%}

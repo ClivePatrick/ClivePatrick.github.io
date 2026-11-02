@@ -13,4 +13,5 @@ nav:
   - title: Contact
     url: "#"
   - title: Resume
-    url: "#"
+    url: /assets/files/resume.pdf
+    new_tab: true
