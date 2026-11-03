@@ -14,6 +14,8 @@
 #     image:  /assets/images/project/hero.png
 #     side:   left or right (default right)
 #     height: e.g. 26rem (default 22rem); width follows the image
+#     overhang:        how far it sticks out past the side edge, e.g. 3rem (default 1rem)
+#     mobile_overhang: how far it sticks out above the top edge on mobile (default 1rem)
 #   flip:       true to mirror the layout: title, tags and links on the right,
 #               hero on the opposite side to `hero.side`
 
@@ -39,6 +41,9 @@
   hero:
     image: /assets/images/a-foxs-tale/hero.png
     side: right
+    height: 28rem
+    overhang: 3rem
+    mobile_overhang: 4rem
   links:
     - url: https://notfoxstudios.itch.io/a-foxs-tale
       icon: fa-itch-io

@@ -6,7 +6,7 @@ $text: #ececf1;
 $panel-bg: #1e1e25; // default panel colour
 $radius: 1.5rem;
 $pad: 2rem;
-$hero-overhang: 1rem; // how far the hero image extends past the panel edge
+$hero-overhang: 1rem; // how far the hero image extends past the panel edge, overridable per project
 $hero-height: 22rem; // default hero height, overridable per project
 
 body {
@@ -15,6 +15,7 @@ body {
     line-height: 1.5;
     background: $page-bg;
     color: $text;
+    overflow-x: clip; // heroes can overhang past the page gutter on narrow screens
 }
 
 header nav ul {
@@ -133,11 +134,11 @@ main {
     margin-block: -($pad + $hero-overhang);
 
     .project--hero-right & {
-        margin-right: -($pad + $hero-overhang);
+        margin-right: calc(-#{$pad} - var(--hero-overhang, #{$hero-overhang}));
     }
 
     .project--hero-left & {
-        margin-left: -($pad + $hero-overhang);
+        margin-left: calc(-#{$pad} - var(--hero-overhang, #{$hero-overhang}));
     }
 }
 
@@ -201,6 +202,6 @@ main {
         height: calc(var(--hero-height, #{$hero-height}) * 0.7);
         max-width: 100%;
         object-fit: contain;
-        margin: (-$pad - $hero-overhang) 0 0;
+        margin: calc(-#{$pad} - var(--hero-mobile-overhang, #{$hero-overhang})) 0 0;
     }
 }

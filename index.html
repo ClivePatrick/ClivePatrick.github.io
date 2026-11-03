@@ -74,7 +74,12 @@ layout: default
         {%- assign size = project.hero.image | image_size %}
         <img class="project__hero" src="{{ project.hero.image | relative_url }}" alt="{{ project.name }}"
             {%- if size %} width="{{ size[0] }}" height="{{ size[1] }}"{% endif %}
-            {%- if project.hero.height %} style="--hero-height: {{ project.hero.height }}"{% endif %} />
+            {%- capture hero_style -%}
+                {%- if project.hero.height %}--hero-height: {{ project.hero.height }};{% endif -%}
+                {%- if project.hero.overhang %}--hero-overhang: {{ project.hero.overhang }};{% endif -%}
+                {%- if project.hero.mobile_overhang %}--hero-mobile-overhang: {{ project.hero.mobile_overhang }};{% endif -%}
+            {%- endcapture %}
+            {%- if hero_style != '' %} style="{{ hero_style }}"{% endif %} />
         {% endif %}
     </section>
     {% endfor %}
